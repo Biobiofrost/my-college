@@ -1,0 +1,1057 @@
+[
+  {
+    "name": "红烧肉",
+    "description": "经典家常菜，肥而不腻，入口即化",
+    "ingredients": [
+      {"name": "五花肉", "amount": "500g"},
+      {"name": "冰糖", "amount": "30g"},
+      {"name": "生抽", "amount": "2勺"},
+      {"name": "老抽", "amount": "1勺"},
+      {"name": "料酒", "amount": "2勺"},
+      {"name": "八角", "amount": "2个"},
+      {"name": "桂皮", "amount": "1小块"},
+      {"name": "葱姜", "amount": "适量"}
+    ],
+    "steps": [
+      "五花肉切块，冷水下锅焯水后捞出",
+      "锅中放少许油，放入冰糖小火炒至焦糖色",
+      "放入五花肉翻炒上色",
+      "加入生抽、老抽、料酒翻炒均匀",
+      "加入热水没过肉，放入八角、桂皮、葱姜",
+      "大火烧开后转小火炖1小时",
+      "大火收汁即可"
+    ],
+    "cuisine": "本帮菜",
+    "region": "上海",
+    "tags": ["热菜", "家常", "下饭", "浓香", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 3,
+    "prep_time": 20,
+    "cook_time": 90,
+    "image_url": ""
+  },
+  {
+    "name": "麻婆豆腐",
+    "description": "四川经典名菜，麻辣鲜香",
+    "ingredients": [
+      {"name": "嫩豆腐", "amount": "1块"},
+      {"name": "猪肉末", "amount": "100g"},
+      {"name": "豆瓣酱", "amount": "2勺"},
+      {"name": "花椒粉", "amount": "适量"},
+      {"name": "辣椒粉", "amount": "适量"},
+      {"name": "蒜末", "amount": "适量"},
+      {"name": "葱花", "amount": "适量"}
+    ],
+    "steps": [
+      "豆腐切块，焯水后捞出备用",
+      "锅中放油，炒香肉末",
+      "加入豆瓣酱、辣椒粉炒出红油",
+      "加入适量水，放入豆腐",
+      "小火煮5分钟入味",
+      "勾芡，撒上花椒粉和葱花"
+    ],
+    "cuisine": "川菜",
+    "region": "四川",
+    "tags": ["辣", "下饭", "家常", "热菜", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 15,
+    "cook_time": 20,
+    "image_url": ""
+  },
+  {
+    "name": "番茄蛋花汤",
+    "description": "清淡爽口，营养丰富",
+    "ingredients": [
+      {"name": "番茄", "amount": "2个"},
+      {"name": "鸡蛋", "amount": "2个"},
+      {"name": "葱花", "amount": "适量"},
+      {"name": "盐", "amount": "适量"},
+      {"name": "香油", "amount": "少许"}
+    ],
+    "steps": [
+      "番茄切块，鸡蛋打散备用",
+      "锅中放少许油，炒香番茄至出汁",
+      "加入适量清水烧开",
+      "缓缓倒入蛋液，形成蛋花",
+      "加盐调味，撒上葱花和香油"
+    ],
+    "cuisine": "家常菜",
+    "region": "全国",
+    "tags": ["汤", "清淡", "快手", "滋润", "素菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 1,
+    "prep_time": 10,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "凉拌黄瓜",
+    "description": "清爽开胃，夏日必备",
+    "ingredients": [
+      {"name": "黄瓜", "amount": "2根"},
+      {"name": "蒜末", "amount": "适量"},
+      {"name": "生抽", "amount": "2勺"},
+      {"name": "香醋", "amount": "1勺"},
+      {"name": "辣椒油", "amount": "适量"},
+      {"name": "香油", "amount": "少许"},
+      {"name": "白糖", "amount": "少许"}
+    ],
+    "steps": [
+      "黄瓜拍碎，切段",
+      "加入蒜末、生抽、香醋、辣椒油、香油、白糖",
+      "搅拌均匀，腌制10分钟即可"
+    ],
+    "cuisine": "家常菜",
+    "region": "全国",
+    "tags": ["凉拌", "清淡", "快手", "开胃", "素菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 1,
+    "prep_time": 10,
+    "cook_time": 0,
+    "image_url": ""
+  },
+  {
+    "name": "酸辣土豆丝",
+    "description": "酸辣可口，下饭神器",
+    "ingredients": [
+      {"name": "土豆", "amount": "2个"},
+      {"name": "干辣椒", "amount": "适量"},
+      {"name": "花椒", "amount": "少许"},
+      {"name": "蒜末", "amount": "适量"},
+      {"name": "香醋", "amount": "2勺"},
+      {"name": "盐", "amount": "适量"}
+    ],
+    "steps": [
+      "土豆去皮切丝，泡水去除淀粉",
+      "锅中放油，爆香干辣椒和花椒",
+      "放入土豆丝大火翻炒",
+      "加入香醋和盐调味",
+      "翻炒至断生即可"
+    ],
+    "cuisine": "川菜",
+    "region": "四川",
+    "tags": ["辣", "酸", "下饭", "快手", "素菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 15,
+    "cook_time": 10,
+    "image_url": ""
+  },
+  {
+    "name": "排骨莲藕汤",
+    "description": "滋补养颜，适合秋冬",
+    "ingredients": [
+      {"name": "排骨", "amount": "500g"},
+      {"name": "莲藕", "amount": "1节"},
+      {"name": "姜片", "amount": "适量"},
+      {"name": "枸杞", "amount": "少许"},
+      {"name": "盐", "amount": "适量"}
+    ],
+    "steps": [
+      "排骨焯水后捞出备用",
+      "莲藕去皮切块",
+      "将排骨和莲藕放入锅中，加入足量清水",
+      "大火烧开后转小火炖1.5小时",
+      "加入枸杞和盐调味"
+    ],
+    "cuisine": "粤菜",
+    "region": "广东",
+    "tags": ["汤", "滋润", "滋补", "热菜", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 20,
+    "cook_time": 120,
+    "image_url": ""
+  },
+  {
+    "name": "宫保鸡丁",
+    "description": "经典川菜，香辣开胃",
+    "ingredients": [
+      {"name": "鸡胸肉", "amount": "300g"},
+      {"name": "花生米", "amount": "50g"},
+      {"name": "干辣椒", "amount": "适量"},
+      {"name": "花椒", "amount": "少许"},
+      {"name": "黄瓜丁", "amount": "适量"},
+      {"name": "葱姜蒜", "amount": "适量"},
+      {"name": "料酒、生抽、醋、糖", "amount": "适量"}
+    ],
+    "steps": [
+      "鸡肉切丁，用料酒、生抽腌制15分钟",
+      "调制碗汁：醋、糖、生抽、淀粉水混合",
+      "锅中放油，爆香干辣椒和花椒",
+      "放入鸡丁翻炒至变色",
+      "加入黄瓜丁和花生米",
+      "倒入碗汁翻炒均匀"
+    ],
+    "cuisine": "川菜",
+    "region": "四川",
+    "tags": ["辣", "下饭", "经典", "热菜", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 3,
+    "prep_time": 20,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "皮蛋瘦肉粥",
+    "description": "养胃暖身，适合早餐",
+    "ingredients": [
+      {"name": "大米", "amount": "100g"},
+      {"name": "皮蛋", "amount": "2个"},
+      {"name": "瘦肉", "amount": "100g"},
+      {"name": "姜丝", "amount": "适量"},
+      {"name": "葱花", "amount": "适量"},
+      {"name": "盐", "amount": "适量"}
+    ],
+    "steps": [
+      "大米洗净，浸泡30分钟",
+      "瘦肉切丝，用料酒和盐腌制",
+      "皮蛋切小块",
+      "锅中加水烧开，放入大米煮至软烂",
+      "加入肉丝和皮蛋继续煮10分钟",
+      "加盐调味，撒上姜丝和葱花"
+    ],
+    "cuisine": "粤菜",
+    "region": "广东",
+    "tags": ["粥", "滋润", "养胃", "早餐", "荤菜"],
+    "meal_type": ["早餐"],
+    "difficulty": 2,
+    "prep_time": 40,
+    "cook_time": 60,
+    "image_url": ""
+  },
+  {
+    "name": "蒜蓉西兰花",
+    "description": "健康低脂，营养丰富",
+    "ingredients": [
+      {"name": "西兰花", "amount": "1颗"},
+      {"name": "蒜末", "amount": "适量"},
+      {"name": "蚝油", "amount": "1勺"},
+      {"name": "盐", "amount": "适量"},
+      {"name": "食用油", "amount": "适量"}
+    ],
+    "steps": [
+      "西兰花切小朵，焯水后捞出",
+      "锅中放油，爆香蒜末",
+      "放入西兰花翻炒",
+      "加入蚝油和盐调味",
+      "翻炒均匀即可"
+    ],
+    "cuisine": "家常菜",
+    "region": "全国",
+    "tags": ["清淡", "快手", "健康", "低脂", "素菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 1,
+    "prep_time": 10,
+    "cook_time": 10,
+    "image_url": ""
+  },
+  {
+    "name": "羊肉泡馍",
+    "description": "西北经典美食，暖身驱寒",
+    "ingredients": [
+      {"name": "羊肉", "amount": "500g"},
+      {"name": "馍", "amount": "2个"},
+      {"name": "粉丝", "amount": "适量"},
+      {"name": "木耳", "amount": "适量"},
+      {"name": "香菜", "amount": "适量"},
+      {"name": "葱姜", "amount": "适量"},
+      {"name": "八角、桂皮", "amount": "适量"}
+    ],
+    "steps": [
+      "羊肉切块，焯水后捞出",
+      "锅中加水，放入羊肉和香料炖2小时",
+      "馍掰成小块备用",
+      "将馍块和粉丝放入碗中",
+      "浇上热羊肉汤",
+      "撒上香菜和葱花"
+    ],
+    "cuisine": "西北菜",
+    "region": "陕西",
+    "tags": ["热菜", "汤", "暖身", "滋补", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 4,
+    "prep_time": 30,
+    "cook_time": 150,
+    "image_url": ""
+  },
+  {
+    "name": "清蒸鲈鱼",
+    "description": "清淡鲜美，保留鱼的原汁原味",
+    "ingredients": [
+      {"name": "鲈鱼", "amount": "1条"},
+      {"name": "葱姜", "amount": "适量"},
+      {"name": "蒸鱼豉油", "amount": "2勺"},
+      {"name": "料酒", "amount": "1勺"},
+      {"name": "食用油", "amount": "适量"}
+    ],
+    "steps": [
+      "鲈鱼处理干净，两面划几刀",
+      "用料酒和姜片腌制10分钟",
+      "水烧开后放入鱼蒸8-10分钟",
+      "倒掉蒸出的水，铺上葱丝",
+      "淋上蒸鱼豉油，浇上热油"
+    ],
+    "cuisine": "粤菜",
+    "region": "广东",
+    "tags": ["清淡", "海鲜", "健康", "热菜", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 15,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "糖醋里脊",
+    "description": "酸甜可口，老少皆宜",
+    "ingredients": [
+      {"name": "猪里脊", "amount": "300g"},
+      {"name": "淀粉", "amount": "适量"},
+      {"name": "番茄酱", "amount": "3勺"},
+      {"name": "白糖", "amount": "2勺"},
+      {"name": "醋", "amount": "2勺"},
+      {"name": "盐", "amount": "少许"}
+    ],
+    "steps": [
+      "里脊切条，用盐和料酒腌制",
+      "裹上淀粉，炸至金黄酥脆",
+      "调制糖醋汁：番茄酱、糖、醋、水混合",
+      "锅中倒入糖醋汁烧开",
+      "放入炸好的里脊翻炒均匀"
+    ],
+    "cuisine": "鲁菜",
+    "region": "山东",
+    "tags": ["酸甜", "下饭", "经典", "热菜", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 3,
+    "prep_time": 20,
+    "cook_time": 20,
+    "image_url": ""
+  },
+  {
+    "name": "西红柿炒鸡蛋",
+    "description": "国民家常菜，简单美味",
+    "ingredients": [
+      {"name": "西红柿", "amount": "2个"},
+      {"name": "鸡蛋", "amount": "3个"},
+      {"name": "葱花", "amount": "适量"},
+      {"name": "盐", "amount": "适量"},
+      {"name": "糖", "amount": "少许"}
+    ],
+    "steps": [
+      "西红柿切块，鸡蛋打散",
+      "锅中放油，炒熟鸡蛋盛出",
+      "锅中放少许油，炒西红柿至出汁",
+      "加入鸡蛋翻炒均匀",
+      "加盐和糖调味，撒上葱花"
+    ],
+    "cuisine": "家常菜",
+    "region": "全国",
+    "tags": ["家常", "快手", "下饭", "热菜", "素菜"],
+    "meal_type": ["早餐", "午餐", "晚餐"],
+    "difficulty": 1,
+    "prep_time": 10,
+    "cook_time": 10,
+    "image_url": ""
+  },
+  {
+    "name": "麻辣香锅",
+    "description": "麻辣鲜香，食材丰富",
+    "ingredients": [
+      {"name": "各种蔬菜", "amount": "适量"},
+      {"name": "肉类", "amount": "200g"},
+      {"name": "麻辣香锅底料", "amount": "1包"},
+      {"name": "蒜末", "amount": "适量"},
+      {"name": "芝麻", "amount": "少许"}
+    ],
+    "steps": [
+      "所有食材洗净切好",
+      "分别焯水或过油",
+      "锅中放油，炒香底料和蒜末",
+      "放入所有食材翻炒均匀",
+      "撒上芝麻即可"
+    ],
+    "cuisine": "川菜",
+    "region": "四川",
+    "tags": ["辣", "下饭", "聚餐", "热菜", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 30,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "小米粥",
+    "description": "养胃佳品，适合早餐",
+    "ingredients": [
+      {"name": "小米", "amount": "100g"},
+      {"name": "红枣", "amount": "5颗"},
+      {"name": "枸杞", "amount": "少许"},
+      {"name": "水", "amount": "适量"}
+    ],
+    "steps": [
+      "小米洗净，浸泡30分钟",
+      "锅中加水烧开，放入小米",
+      "大火烧开后转小火慢煮30分钟",
+      "加入红枣和枸杞继续煮10分钟",
+      "煮至粥稠即可"
+    ],
+    "cuisine": "家常菜",
+    "region": "全国",
+    "tags": ["粥", "养胃", "早餐", "清淡", "素菜"],
+    "meal_type": ["早餐"],
+    "difficulty": 1,
+    "prep_time": 35,
+    "cook_time": 40,
+    "image_url": ""
+  },
+  {
+    "name": "回锅肉",
+    "description": "四川经典家常菜，肥而不腻",
+    "ingredients": [
+      {"name": "五花肉", "amount": "300g"},
+      {"name": "蒜苗", "amount": "100g"},
+      {"name": "豆瓣酱", "amount": "2勺"},
+      {"name": "甜面酱", "amount": "1勺"},
+      {"name": "豆豉", "amount": "适量"},
+      {"name": "葱姜", "amount": "适量"}
+    ],
+    "steps": [
+      "五花肉整块煮熟，切薄片",
+      "蒜苗切段",
+      "锅中放少许油，煸炒肉片至出油",
+      "加入豆瓣酱、甜面酱、豆豉炒香",
+      "放入蒜苗翻炒均匀"
+    ],
+    "cuisine": "川菜",
+    "region": "四川",
+    "tags": ["辣", "下饭", "家常", "热菜", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 20,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "冬瓜排骨汤",
+    "description": "清热解暑，适合夏天",
+    "ingredients": [
+      {"name": "排骨", "amount": "400g"},
+      {"name": "冬瓜", "amount": "500g"},
+      {"name": "姜片", "amount": "适量"},
+      {"name": "葱段", "amount": "适量"},
+      {"name": "盐", "amount": "适量"}
+    ],
+    "steps": [
+      "排骨焯水后捞出备用",
+      "冬瓜去皮切块",
+      "锅中加水，放入排骨和姜片烧开",
+      "转小火炖40分钟",
+      "加入冬瓜继续炖20分钟",
+      "加盐调味，撒上葱花"
+    ],
+    "cuisine": "粤菜",
+    "region": "广东",
+    "tags": ["汤", "清淡", "滋润", "热菜", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 1,
+    "prep_time": 15,
+    "cook_time": 60,
+    "image_url": ""
+  },
+  {
+    "name": "鱼香肉丝",
+    "description": "经典川菜，鱼香味浓",
+    "ingredients": [
+      {"name": "猪肉", "amount": "250g"},
+      {"name": "木耳", "amount": "适量"},
+      {"name": "胡萝卜", "amount": "1根"},
+      {"name": "青椒", "amount": "1个"},
+      {"name": "葱姜蒜", "amount": "适量"},
+      {"name": "豆瓣酱", "amount": "1勺"}
+    ],
+    "steps": [
+      "猪肉切丝，用料酒和淀粉腌制",
+      "木耳、胡萝卜、青椒切丝",
+      "调制鱼香汁：醋、糖、酱油、淀粉水混合",
+      "锅中放油，炒香肉丝盛出",
+      "爆香葱姜蒜和豆瓣酱",
+      "放入蔬菜丝翻炒，加入肉丝",
+      "倒入鱼香汁翻炒均匀"
+    ],
+    "cuisine": "川菜",
+    "region": "四川",
+    "tags": ["辣", "下饭", "经典", "热菜", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 3,
+    "prep_time": 20,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "绿豆汤",
+    "description": "清热解暑，夏日必备",
+    "ingredients": [
+      {"name": "绿豆", "amount": "100g"},
+      {"name": "冰糖", "amount": "适量"},
+      {"name": "水", "amount": "适量"}
+    ],
+    "steps": [
+      "绿豆洗净，浸泡2小时",
+      "锅中加水烧开，放入绿豆",
+      "大火烧开后转小火煮30分钟",
+      "加入冰糖煮至融化",
+      "冷却后冷藏更佳"
+    ],
+    "cuisine": "家常菜",
+    "region": "全国",
+    "tags": ["汤", "清淡", "解暑", "甜品", "素菜"],
+    "meal_type": ["下午茶"],
+    "difficulty": 1,
+    "prep_time": 125,
+    "cook_time": 30,
+    "image_url": ""
+  },
+  {
+    "name": "红烧茄子",
+    "description": "软糯入味，下饭神器",
+    "ingredients": [
+      {"name": "茄子", "amount": "2根"},
+      {"name": "蒜末", "amount": "适量"},
+      {"name": "生抽", "amount": "2勺"},
+      {"name": "老抽", "amount": "1勺"},
+      {"name": "糖", "amount": "1勺"},
+      {"name": "淀粉", "amount": "适量"}
+    ],
+    "steps": [
+      "茄子切滚刀块，裹上淀粉",
+      "锅中放油，炸至金黄捞出",
+      "锅中留少许油，爆香蒜末",
+      "加入生抽、老抽、糖和少许水烧开",
+      "放入茄子翻炒均匀",
+      "勾芡收汁即可"
+    ],
+    "cuisine": "家常菜",
+    "region": "全国",
+    "tags": ["下饭", "家常", "热菜", "素菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 15,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "小笼包",
+    "description": "上海特色，皮薄汁多",
+    "ingredients": [
+      {"name": "猪肉馅", "amount": "300g"},
+      {"name": "面粉", "amount": "300g"},
+      {"name": "皮冻", "amount": "100g"},
+      {"name": "葱姜", "amount": "适量"},
+      {"name": "生抽", "amount": "2勺"},
+      {"name": "料酒", "amount": "1勺"}
+    ],
+    "steps": [
+      "面粉加水揉成面团，醒发30分钟",
+      "猪肉馅加入调料和皮冻搅拌均匀",
+      "面团分成小剂子，擀成薄皮",
+      "包入肉馅，捏出褶子",
+      "蒸锅水烧开，放入小笼包蒸8分钟"
+    ],
+    "cuisine": "本帮菜",
+    "region": "上海",
+    "tags": ["点心", "早餐", "经典", "荤菜"],
+    "meal_type": ["早餐", "午餐"],
+    "difficulty": 4,
+    "prep_time": 60,
+    "cook_time": 10,
+    "image_url": ""
+  },
+  {
+    "name": "热干面",
+    "description": "武汉特色早餐，芝麻酱香浓",
+    "ingredients": [
+      {"name": "碱水面", "amount": "200g"},
+      {"name": "芝麻酱", "amount": "2勺"},
+      {"name": "酱油", "amount": "1勺"},
+      {"name": "醋", "amount": "少许"},
+      {"name": "辣萝卜", "amount": "适量"},
+      {"name": "葱花", "amount": "适量"}
+    ],
+    "steps": [
+      "面条煮熟，过凉水沥干",
+      "芝麻酱用温水调开",
+      "面条加入芝麻酱、酱油、醋",
+      "拌匀后撒上辣萝卜和葱花"
+    ],
+    "cuisine": "鄂菜",
+    "region": "湖北",
+    "tags": ["面食", "早餐", "快手", "素菜"],
+    "meal_type": ["早餐"],
+    "difficulty": 1,
+    "prep_time": 5,
+    "cook_time": 10,
+    "image_url": ""
+  },
+  {
+    "name": "螺蛳粉",
+    "description": "柳州特色，酸辣鲜爽",
+    "ingredients": [
+      {"name": "螺蛳粉", "amount": "1包"},
+      {"name": "酸笋", "amount": "适量"},
+      {"name": "腐竹", "amount": "适量"},
+      {"name": "花生", "amount": "适量"},
+      {"name": "青菜", "amount": "适量"}
+    ],
+    "steps": [
+      "螺蛳粉按包装说明煮熟",
+      "加入酸笋、腐竹等配料",
+      "加入青菜烫熟",
+      "撒上花生即可"
+    ],
+    "cuisine": "桂菜",
+    "region": "广西",
+    "tags": ["粉面", "辣", "酸", "特色", "素菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 1,
+    "prep_time": 5,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "过桥米线",
+    "description": "云南名吃，汤鲜味美",
+    "ingredients": [
+      {"name": "米线", "amount": "200g"},
+      {"name": "鸡汤", "amount": "适量"},
+      {"name": "肉片", "amount": "100g"},
+      {"name": "蔬菜", "amount": "适量"},
+      {"name": "鹌鹑蛋", "amount": "2个"}
+    ],
+    "steps": [
+      "鸡汤烧开，保持滚烫",
+      "米线煮熟备用",
+      "将肉片、蔬菜放入滚汤中烫熟",
+      "加入米线和鹌鹑蛋"
+    ],
+    "cuisine": "滇菜",
+    "region": "云南",
+    "tags": ["粉面", "汤", "鲜", "特色", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 20,
+    "cook_time": 20,
+    "image_url": ""
+  },
+  {
+    "name": "兰州拉面",
+    "description": "一清二白三红四绿五黄",
+    "ingredients": [
+      {"name": "拉面", "amount": "200g"},
+      {"name": "牛肉", "amount": "100g"},
+      {"name": "萝卜", "amount": "适量"},
+      {"name": "辣椒油", "amount": "适量"},
+      {"name": "香菜", "amount": "适量"}
+    ],
+    "steps": [
+      "牛肉切片，萝卜切片",
+      "面条拉好煮熟",
+      "碗中放入牛肉、萝卜",
+      "加入热汤和面条",
+      "淋上辣椒油，撒上香菜"
+    ],
+    "cuisine": "西北菜",
+    "region": "甘肃",
+    "tags": ["面食", "汤", "快餐", "荤菜"],
+    "meal_type": ["早餐", "午餐"],
+    "difficulty": 3,
+    "prep_time": 30,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "煎饼果子",
+    "description": "天津特色早餐",
+    "ingredients": [
+      {"name": "绿豆面", "amount": "100g"},
+      {"name": "鸡蛋", "amount": "1个"},
+      {"name": "油条", "amount": "1根"},
+      {"name": "葱花", "amount": "适量"},
+      {"name": "甜面酱", "amount": "适量"}
+    ],
+    "steps": [
+      "绿豆面摊成薄饼",
+      "打上鸡蛋摊匀",
+      "翻面后刷上甜面酱",
+      "放上油条和葱花",
+      "卷起即可"
+    ],
+    "cuisine": "津菜",
+    "region": "天津",
+    "tags": ["早餐", "快手", "特色", "素菜"],
+    "meal_type": ["早餐"],
+    "difficulty": 2,
+    "prep_time": 10,
+    "cook_time": 5,
+    "image_url": ""
+  },
+  {
+    "name": "东坡肉",
+    "description": "杭州名菜，酥烂入味",
+    "ingredients": [
+      {"name": "五花肉", "amount": "500g"},
+      {"name": "绍酒", "amount": "200ml"},
+      {"name": "生抽", "amount": "3勺"},
+      {"name": "老抽", "amount": "1勺"},
+      {"name": "冰糖", "amount": "50g"},
+      {"name": "葱姜", "amount": "适量"}
+    ],
+    "steps": [
+      "五花肉切块，焯水后捞出",
+      "砂锅底部铺上葱姜",
+      "放入肉块，加入绍酒和调料",
+      "小火炖2小时",
+      "大火收汁即可"
+    ],
+    "cuisine": "浙菜",
+    "region": "浙江",
+    "tags": ["热菜", "浓香", "经典", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 3,
+    "prep_time": 20,
+    "cook_time": 150,
+    "image_url": ""
+  },
+  {
+    "name": "佛跳墙",
+    "description": "闽菜之王，滋补佳品",
+    "ingredients": [
+      {"name": "鲍鱼", "amount": "2只"},
+      {"name": "海参", "amount": "1条"},
+      {"name": "花胶", "amount": "适量"},
+      {"name": "香菇", "amount": "适量"},
+      {"name": "鸡汤", "amount": "适量"}
+    ],
+    "steps": [
+      "所有食材提前泡发处理",
+      "放入砂锅中",
+      "加入鸡汤",
+      "小火慢炖3小时"
+    ],
+    "cuisine": "闽菜",
+    "region": "福建",
+    "tags": ["滋补", "海鲜", "高档", "荤菜"],
+    "meal_type": ["晚餐"],
+    "difficulty": 5,
+    "prep_time": 60,
+    "cook_time": 180,
+    "image_url": ""
+  },
+  {
+    "name": "剁椒鱼头",
+    "description": "湘菜代表，鲜辣开胃",
+    "ingredients": [
+      {"name": "鱼头", "amount": "1个"},
+      {"name": "剁椒", "amount": "适量"},
+      {"name": "蒜末", "amount": "适量"},
+      {"name": "葱花", "amount": "适量"},
+      {"name": "豆豉", "amount": "适量"}
+    ],
+    "steps": [
+      "鱼头对半切开，腌制",
+      "铺上剁椒和蒜末",
+      "水烧开后蒸15分钟",
+      "撒上葱花，浇热油"
+    ],
+    "cuisine": "湘菜",
+    "region": "湖南",
+    "tags": ["辣", "海鲜", "经典", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 20,
+    "cook_time": 20,
+    "image_url": ""
+  },
+  {
+    "name": "小炒黄牛肉",
+    "description": "湖南家常菜，香辣下饭",
+    "ingredients": [
+      {"name": "黄牛肉", "amount": "300g"},
+      {"name": "青椒", "amount": "2个"},
+      {"name": "小米椒", "amount": "适量"},
+      {"name": "蒜末", "amount": "适量"},
+      {"name": "生抽", "amount": "2勺"}
+    ],
+    "steps": [
+      "牛肉切片腌制",
+      "青椒切丝",
+      "大火爆炒牛肉至变色",
+      "加入青椒和调料翻炒"
+    ],
+    "cuisine": "湘菜",
+    "region": "湖南",
+    "tags": ["辣", "下饭", "快手", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 15,
+    "cook_time": 10,
+    "image_url": ""
+  },
+  {
+    "name": "锅包肉",
+    "description": "东北名菜，外酥里嫩",
+    "ingredients": [
+      {"name": "猪里脊", "amount": "300g"},
+      {"name": "淀粉", "amount": "适量"},
+      {"name": "白糖", "amount": "3勺"},
+      {"name": "醋", "amount": "2勺"},
+      {"name": "番茄酱", "amount": "1勺"}
+    ],
+    "steps": [
+      "里脊切片，裹淀粉炸至金黄",
+      "调制糖醋汁",
+      "锅中倒入糖醋汁烧开",
+      "放入炸好的肉片翻炒"
+    ],
+    "cuisine": "东北菜",
+    "region": "黑龙江",
+    "tags": ["酸甜", "下饭", "经典", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 3,
+    "prep_time": 20,
+    "cook_time": 15,
+    "image_url": ""
+  },
+  {
+    "name": "杀猪菜",
+    "description": "东北特色，酸菜炖血肠",
+    "ingredients": [
+      {"name": "酸菜", "amount": "500g"},
+      {"name": "五花肉", "amount": "300g"},
+      {"name": "血肠", "amount": "200g"},
+      {"name": "粉条", "amount": "适量"},
+      {"name": "葱姜", "amount": "适量"}
+    ],
+    "steps": [
+      "酸菜洗净切丝",
+      "五花肉切片",
+      "锅中加水，放入酸菜和肉炖1小时",
+      "加入血肠和粉条继续炖15分钟"
+    ],
+    "cuisine": "东北菜",
+    "region": "黑龙江",
+    "tags": ["热菜", "炖菜", "特色", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 30,
+    "cook_time": 90,
+    "image_url": ""
+  },
+  {
+    "name": "手抓羊肉",
+    "description": "西北特色，原汁原味",
+    "ingredients": [
+      {"name": "羊肉", "amount": "1000g"},
+      {"name": "葱姜", "amount": "适量"},
+      {"name": "花椒", "amount": "少许"},
+      {"name": "盐", "amount": "适量"}
+    ],
+    "steps": [
+      "羊肉切大块，冷水下锅",
+      "加入葱姜和花椒",
+      "大火烧开后转小火炖1.5小时",
+      "捞出蘸盐食用"
+    ],
+    "cuisine": "西北菜",
+    "region": "宁夏",
+    "tags": ["热菜", "荤菜", "特色", "滋补"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 2,
+    "prep_time": 15,
+    "cook_time": 100,
+    "image_url": ""
+  },
+  {
+    "name": "大盘鸡",
+    "description": "新疆名菜，鸡肉软烂",
+    "ingredients": [
+      {"name": "鸡", "amount": "半只"},
+      {"name": "土豆", "amount": "2个"},
+      {"name": "青椒", "amount": "2个"},
+      {"name": "皮带面", "amount": "适量"},
+      {"name": "豆瓣酱", "amount": "2勺"}
+    ],
+    "steps": [
+      "鸡肉切块，土豆切块",
+      "锅中放油，炒香豆瓣酱",
+      "放入鸡肉翻炒上色",
+      "加入土豆和水炖30分钟",
+      "加入青椒，配皮带面食用"
+    ],
+    "cuisine": "西北菜",
+    "region": "新疆",
+    "tags": ["热菜", "辣", "聚餐", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 3,
+    "prep_time": 30,
+    "cook_time": 45,
+    "image_url": ""
+  },
+  {
+    "name": "担担面",
+    "description": "四川小吃，麻辣鲜香",
+    "ingredients": [
+      {"name": "面条", "amount": "200g"},
+      {"name": "猪肉末", "amount": "100g"},
+      {"name": "芽菜", "amount": "适量"},
+      {"name": "花生碎", "amount": "适量"},
+      {"name": "辣椒油", "amount": "适量"},
+      {"name": "芝麻酱", "amount": "1勺"}
+    ],
+    "steps": [
+      "面条煮熟备用",
+      "炒香肉末和芽菜",
+      "碗中放入调料",
+      "加入面条和肉末",
+      "撒上花生碎"
+    ],
+    "cuisine": "川菜",
+    "region": "四川",
+    "tags": ["面食", "辣", "小吃", "荤菜"],
+    "meal_type": ["早餐", "午餐"],
+    "difficulty": 2,
+    "prep_time": 15,
+    "cook_time": 10,
+    "image_url": ""
+  },
+  {
+    "name": "广式早茶",
+    "description": "广东特色，虾饺烧麦",
+    "ingredients": [
+      {"name": "虾仁", "amount": "200g"},
+      {"name": "猪肉", "amount": "100g"},
+      {"name": "澄面", "amount": "150g"},
+      {"name": "笋丁", "amount": "适量"},
+      {"name": "盐", "amount": "适量"}
+    ],
+    "steps": [
+      "虾仁去虾线，剁碎",
+      "猪肉剁碎，加入笋丁和调料",
+      "澄面擀成薄皮",
+      "包入馅料，蒸8分钟"
+    ],
+    "cuisine": "粤菜",
+    "region": "广东",
+    "tags": ["点心", "早餐", "清淡", "荤菜"],
+    "meal_type": ["早餐"],
+    "difficulty": 4,
+    "prep_time": 45,
+    "cook_time": 10,
+    "image_url": ""
+  },
+  {
+    "name": "老火靓汤",
+    "description": "广东人最爱，滋补养生",
+    "ingredients": [
+      {"name": "猪骨", "amount": "500g"},
+      {"name": "玉米", "amount": "1根"},
+      {"name": "胡萝卜", "amount": "1根"},
+      {"name": "淮山", "amount": "适量"},
+      {"name": "枸杞", "amount": "少许"}
+    ],
+    "steps": [
+      "猪骨焯水",
+      "所有食材放入砂锅",
+      "加入足量清水",
+      "大火烧开后转小火炖2小时",
+      "加盐调味"
+    ],
+    "cuisine": "粤菜",
+    "region": "广东",
+    "tags": ["汤", "滋润", "养生", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 1,
+    "prep_time": 20,
+    "cook_time": 150,
+    "image_url": ""
+  },
+  {
+    "name": "白切鸡",
+    "description": "粤菜经典，皮爽肉滑",
+    "ingredients": [
+      {"name": "三黄鸡", "amount": "1只"},
+      {"name": "姜葱", "amount": "适量"},
+      {"name": "沙姜", "amount": "适量"},
+      {"name": "生抽", "amount": "适量"},
+      {"name": "香油", "amount": "少许"}
+    ],
+    "steps": [
+      "鸡处理干净",
+      "水烧开后放入鸡，浸煮20分钟",
+      "捞出过冰水",
+      "斩件装盘",
+      "蘸姜葱酱食用"
+    ],
+    "cuisine": "粤菜",
+    "region": "广东",
+    "tags": ["冷菜", "清淡", "经典", "荤菜"],
+    "meal_type": ["午餐", "晚餐"],
+    "difficulty": 3,
+    "prep_time": 15,
+    "cook_time": 30,
+    "image_url": ""
+  },
+  {
+    "name": "桂林米粉",
+    "description": "桂林特色，卤水香浓",
+    "ingredients": [
+      {"name": "米粉", "amount": "200g"},
+      {"name": "卤牛肉", "amount": "100g"},
+      {"name": "卤水", "amount": "适量"},
+      {"name": "酸豆角", "amount": "适量"},
+      {"name": "葱花", "amount": "适量"}
+    ],
+    "steps": [
+      "米粉煮熟",
+      "卤牛肉切片",
+      "碗中放入米粉和牛肉",
+      "加入卤水",
+      "撒上酸豆角和葱花"
+    ],
+    "cuisine": "桂菜",
+    "region": "广西",
+    "tags": ["粉面", "早餐", "特色", "荤菜"],
+    "meal_type": ["早餐", "午餐"],
+    "difficulty": 2,
+    "prep_time": 10,
+    "cook_time": 10,
+    "image_url": ""
+  },
+  {
+    "name": "肠粉",
+    "description": "广东早餐，滑嫩爽口",
+    "ingredients": [
+      {"name": "米浆", "amount": "适量"},
+      {"name": "鸡蛋", "amount": "1个"},
+      {"name": "虾仁", "amount": "适量"},
+      {"name": "生菜", "amount": "适量"},
+      {"name": "酱油", "amount": "适量"}
+    ],
+    "steps": [
+      "蒸盘刷油，倒入米浆",
+      "加入鸡蛋和虾仁",
+      "蒸2分钟",
+      "卷起装盘",
+      "淋上酱油"
+    ],
+    "cuisine": "粤菜",
+    "region": "广东",
+    "tags": ["早餐", "清淡", "快手", "荤菜"],
+    "meal_type": ["早餐"],
+    "difficulty": 2,
+    "prep_time": 15,
+    "cook_time": 5,
+    "image_url": ""
+  }
+]

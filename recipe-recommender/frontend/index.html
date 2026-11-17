@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能食谱推荐</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 顶部状态栏 -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span class="status-time">
+                    <i class="fas fa-clock"></i> {{ currentTime }}
+                </span>
+                <span class="status-date">{{ currentDate }}</span>
+            </div>
+            <div class="status-center">
+                <span class="status-meal">
+                    <i class="fas fa-utensils"></i> {{ currentMealType }}
+                </span>
+            </div>
+            <div class="status-right">
+                <span class="status-location" v-if="locationInfo">
+                    <i class="fas fa-map-marker-alt"></i> {{ locationInfo.city }}
+                </span>
+                <span class="status-weather" v-if="weatherInfo">
+                    <i class="fas fa-thermometer-half"></i> {{ weatherInfo.temp }}°C
+                    <i class="fas fa-tint"></i> {{ weatherInfo.humidity }}%
+                    {{ weatherInfo.condition }}
+                </span>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="header-content">
+                <div class="logo" @click="currentPage = 'home'">
+                    <i class="fas fa-utensils"></i>
+                    <h1>智能食谱推荐</h1>
+                </div>
+                <nav class="nav">
+                    <button @click="currentPage = 'home'" :class="{active: currentPage === 'home'}">
+                        <i class="fas fa-home"></i> 首页
+                    </button>
+                    <button @click="currentPage = 'recipes'" :class="{active: currentPage === 'recipes'}">
+                        <i class="fas fa-book"></i> 食谱库
+                    </button>
+                    <button v-if="isLoggedIn" @click="currentPage = 'history'" :class="{active: currentPage === 'history'}">
+                        <i class="fas fa-history"></i> 历史
+                    </button>
+                    <button v-if="isLoggedIn" @click="currentPage = 'profile'" :class="{active: currentPage === 'profile'}">
+                        <i class="fas fa-user"></i> 个人中心
+                    </button>
+                    <button v-if="!isLoggedIn" @click="currentPage = 'login'" class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i> 登录
+                    </button>
+                    <button v-if="isLoggedIn" @click="logout" class="btn-logout">
+                        <i class="fas fa-sign-out-alt"></i> 退出
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <!-- 登录页面 -->
+            <div v-if="currentPage === 'login'" class="auth-page">
+                <div class="auth-container">
+                    <div class="auth-left">
+                        <div class="auth-brand">
+                            <i class="fas fa-utensils"></i>
+                            <h2>智能食谱推荐</h2>
+                            <p>基于天气、心情和口味的个性化推荐</p>
+                        </div>
+                    </div>
+                    <div class="auth-right">
+                        <div class="auth-form">
+                            <h2>{{ isRegister ? '创建账号' : '欢迎回来' }}</h2>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input v-model="authForm.username" placeholder="用户名" type="text">
+                            </div>
+                            <div v-if="isRegister" class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input v-model="authForm.email" placeholder="邮箱" type="email">
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input v-model="authForm.password" placeholder="密码" type="password">
+                            </div>
+                            <button @click="handleAuth" class="btn-primary">
+                                {{ isRegister ? '注册' : '登录' }}
+                            </button>
+                            <p class="auth-switch" @click="isRegister = !isRegister">
+                                {{ isRegister ? '已有账号？去登录' : '没有账号？去注册' }}
+                            </p>
+                            <p v-if="authError" class="error">{{ authError }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 首页 -->
+            <div v-if="currentPage === 'home'" class="home-page">
+                <!-- Hero区域 -->
+                <section class="hero">
+                    <div class="hero-content">
+                        <h2>今天想吃什么？</h2>
+                        <p class="hero-subtitle">
+                            <span class="meal-badge">{{ currentMealType }}</span>
+                            根据天气、时间和你的口味，为你推荐最合适的美食
+                        </p>
+                        <div class="hero-info">
+                            <div class="hero-weather" v-if="weatherInfo">
+                                <i class="fas fa-cloud-sun"></i>
+                                <span>{{ locationInfo?.city || '未知城市' }} · {{ weatherInfo.condition }} · {{ weatherInfo.temp }}°C</span>
+                                <span class="weather-detail">湿度 {{ weatherInfo.humidity }}% · {{ weatherInfo.wind_dir }}</span>
+                            </div>
+                            <div class="hero-time">
+                                <i class="fas fa-clock"></i>
+                                <span>{{ currentTime }} {{ currentDate }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 游客模式 - 快速推荐 -->
+                <section class="quick-recommend">
+                    <h3><i class="fas fa-magic"></i> 快速推荐</h3>
+                    <p class="section-desc">无需登录，立即获取推荐</p>
+                    <div class="quick-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-map-marker-alt"></i> 当前城市</label>
+                                <input v-model="guestForm.city" :placeholder="weatherInfo ? weatherInfo.city : '输入城市名称'" @keyup.enter="getGuestRecommend">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-heart"></i> 想吃什么</label>
+                                <input v-model="guestForm.craving" placeholder="如：火锅、面条、清淡的" @keyup.enter="getGuestRecommend">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-smile"></i> 身体感受</label>
+                                <input v-model="guestForm.body_feeling" placeholder="如：有点冷、上火了" @keyup.enter="getGuestRecommend">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-mobile-alt"></i> 刷到什么美食</label>
+                                <input v-model="guestForm.social_media_inspiration" placeholder="如：看到一个烤肉视频" @keyup.enter="getGuestRecommend">
+                            </div>
+                        </div>
+                        <button @click="getGuestRecommend" class="btn-recommend" :disabled="isLoading">
+                            <i class="fas fa-search" v-if="!isLoading"></i>
+                            <i class="fas fa-spinner fa-spin" v-else></i>
+                            {{ isLoading ? '正在推荐...' : '获取推荐' }}
+                        </button>
+                    </div>
+                </section>
+
+                <!-- 登录用户 - 状态输入 -->
+                <section v-if="isLoggedIn" class="state-input">
+                    <h3><i class="fas fa-sliders-h"></i> 详细状态</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>身体感受</label>
+                            <input v-model="stateForm.body_feeling" placeholder="如：感觉干燥、有点冷">
+                        </div>
+                        <div class="form-group">
+                            <label>心情</label>
+                            <input v-model="stateForm.mood" placeholder="如：想吃点辣的提神">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>想吃什么</label>
+                            <input v-model="stateForm.craving" placeholder="如：火锅、红烧肉">
+                        </div>
+                        <div class="form-group">
+                            <label>社交媒体灵感</label>
+                            <input v-model="stateForm.social_media_inspiration" placeholder="如：刷到一个红烧肉视频">
+                        </div>
+                    </div>
+                    <button @click="submitState" class="btn-recommend" :disabled="isLoading">
+                        <i class="fas fa-search" v-if="!isLoading"></i>
+                        <i class="fas fa-spinner fa-spin" v-else></i>
+                        {{ isLoading ? '正在推荐...' : '获取个性化推荐' }}
+                    </button>
+                </section>
+
+                <!-- 推荐结果 -->
+                <section v-if="recommendations.length" class="recommendations">
+                    <div class="section-header">
+                        <h3><i class="fas fa-star"></i> 为你推荐</h3>
+                        <div class="recommend-meta">
+                            <span v-if="recommendMode === 'tourist'" class="mode-badge tourist">
+                                <i class="fas fa-plane"></i> 旅游模式
+                            </span>
+                            <span v-if="recommendMode === 'migrant'" class="mode-badge migrant">
+                                <i class="fas fa-briefcase"></i> 异地工作模式
+                            </span>
+                            <span class="meal-badge">{{ currentMealType }}</span>
+                        </div>
+                    </div>
+                    <div class="recipe-grid">
+                        <div v-for="rec in recommendations" :key="rec.recipe.id" class="recipe-card" @click="viewRecipe(rec.recipe.id)">
+                            <div class="recipe-image" :style="{backgroundColor: getRecipeColor(rec.recipe.cuisine)}">
+                                <span class="recipe-emoji">{{ getRecipeEmoji(rec.recipe.tags) }}</span>
+                                <div class="recipe-cuisine-badge">{{ rec.recipe.cuisine }}</div>
+                            </div>
+                            <div class="recipe-info">
+                                <h4>{{ rec.recipe.name }}</h4>
+                                <p class="recipe-desc">{{ rec.recipe.description }}</p>
+                                <div class="recipe-tags">
+                                    <span v-for="tag in rec.recipe.tags?.slice(0, 3)" :key="tag" class="tag">{{ tag }}</span>
+                                </div>
+                                <div class="recipe-reasons">
+                                    <p v-for="reason in rec.reasons" :key="reason" class="reason">
+                                        <i class="fas fa-check-circle"></i> {{ reason }}
+                                    </p>
+                                </div>
+                                <div class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> {{ rec.recipe.prep_time + rec.recipe.cook_time }}分钟</span>
+                                    <span><i class="fas fa-signal"></i> {{ '⭐'.repeat(rec.recipe.difficulty) }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 推荐理由说明 -->
+                <section class="features-section">
+                    <h3><i class="fas fa-info-circle"></i> 智能推荐原理</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-cloud-sun"></i>
+                            <h4>天气适配</h4>
+                            <p>根据温度、湿度推荐适合的菜品</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-clock"></i>
+                            <h4>时间匹配</h4>
+                            <p>早中晚餐自动匹配合适的食谱</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>地域特色</h4>
+                            <p>推荐当地特色美食或家乡味道</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-heart"></i>
+                            <h4>口味偏好</h4>
+                            <p>根据个人喜好精准推荐</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 食谱库页面 -->
+            <div v-if="currentPage === 'recipes'" class="recipes-page">
+                <div class="search-section">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input v-model="searchKeyword" placeholder="搜索食谱名称、菜系、食材..." @keyup.enter="searchRecipes">
+                        <button @click="searchRecipes" class="btn-search">搜索</button>
+                    </div>
+                    <div class="filter-tags">
+                        <button v-for="tag in filterTags" :key="tag" 
+                                @click="toggleFilter(tag)" 
+                                :class="{active: activeFilters.includes(tag)}">
+                            {{ tag }}
+                        </button>
+                    </div>
+                </div>
+                <div class="recipe-grid">
+                    <div v-for="recipe in filteredRecipes" :key="recipe.id" class="recipe-card" @click="viewRecipe(recipe.id)">
+                        <div class="recipe-image" :style="{backgroundColor: getRecipeColor(recipe.cuisine)}">
+                            <span class="recipe-emoji">{{ getRecipeEmoji(recipe.tags) }}</span>
+                            <div class="recipe-cuisine-badge">{{ recipe.cuisine }}</div>
+                        </div>
+                        <div class="recipe-info">
+                            <h4>{{ recipe.name }}</h4>
+                            <p class="recipe-desc">{{ recipe.description }}</p>
+                            <div class="recipe-tags">
+                                <span v-for="tag in recipe.tags?.slice(0, 3)" :key="tag" class="tag">{{ tag }}</span>
+                            </div>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> {{ recipe.prep_time + recipe.cook_time }}分钟</span>
+                                <span><i class="fas fa-signal"></i> {{ '⭐'.repeat(recipe.difficulty) }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 食谱详情页面 -->
+            <div v-if="currentPage === 'recipe-detail'" class="recipe-detail-page">
+                <button @click="currentPage = 'recipes'" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> 返回食谱库
+                </button>
+                <div v-if="selectedRecipe" class="recipe-detail">
+                    <div class="recipe-header">
+                        <div class="recipe-image-large" :style="{backgroundColor: getRecipeColor(selectedRecipe.cuisine)}">
+                            <span class="recipe-emoji-large">{{ getRecipeEmoji(selectedRecipe.tags) }}</span>
+                        </div>
+                        <div class="recipe-title-section">
+                            <h2>{{ selectedRecipe.name }}</h2>
+                            <p class="recipe-cuisine">
+                                <i class="fas fa-map-marker-alt"></i> {{ selectedRecipe.cuisine }} · {{ selectedRecipe.region }}
+                            </p>
+                            <div class="recipe-tags">
+                                <span v-for="tag in selectedRecipe.tags" :key="tag" class="tag">{{ tag }}</span>
+                            </div>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 准备{{ selectedRecipe.prep_time }}分钟</span>
+                                <span><i class="fas fa-fire"></i> 烹饪{{ selectedRecipe.cook_time }}分钟</span>
+                                <span><i class="fas fa-signal"></i> 难度{{ '⭐'.repeat(selectedRecipe.difficulty) }}</span>
+                            </div>
+                            <div class="recipe-meal-types">
+                                <span v-for="meal in selectedRecipe.meal_type" :key="meal" class="meal-tag">{{ meal }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-description">
+                        <h3><i class="fas fa-info-circle"></i> 简介</h3>
+                        <p>{{ selectedRecipe.description }}</p>
+                    </div>
+
+                    <div class="recipe-ingredients">
+                        <h3><i class="fas fa-carrot"></i> 食材清单</h3>
+                        <ul>
+                            <li v-for="ing in selectedRecipe.ingredients" :key="ing.name">
+                                <span class="ing-name">{{ ing.name }}</span>
+                                <span class="ing-amount">{{ ing.amount }}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-steps">
+                        <h3><i class="fas fa-list-ol"></i> 烹饪步骤</h3>
+                        <ol>
+                            <li v-for="(step, index) in selectedRecipe.steps" :key="index">
+                                <span class="step-num">{{ index + 1 }}</span>
+                                <span class="step-text">{{ step }}</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 个人中心页面 -->
+            <div v-if="currentPage === 'profile'" class="profile-page">
+                <h2><i class="fas fa-user-cog"></i> 个人中心</h2>
+                <div class="profile-form">
+                    <div class="form-section">
+                        <h3>基本信息</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-home"></i> 家乡</label>
+                                <select v-model="profile.hometown">
+                                    <option value="">请选择</option>
+                                    <option v-for="region in regions" :key="region" :value="region">{{ region }}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-map-marker-alt"></i> 当前城市</label>
+                                <select v-model="profile.current_city">
+                                    <option value="">请选择</option>
+                                    <option v-for="city in cities" :key="city" :value="city">{{ city }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>口味偏好</h3>
+                        <div class="taste-prefs">
+                            <div v-for="(val, key) in profile.taste_preferences" :key="key" class="taste-item">
+                                <label>{{ getTasteLabel(key) }}</label>
+                                <div class="taste-slider">
+                                    <input type="range" v-model.number="profile.taste_preferences[key]" min="0" max="1" step="0.1">
+                                    <span>{{ Math.round(profile.taste_preferences[key] * 100) }}%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>其他信息</h3>
+                        <div class="form-group">
+                            <label><i class="fas fa-allergies"></i> 过敏信息</label>
+                            <input v-model="allergyInput" placeholder="多个用逗号分隔，如：花生,海鲜">
+                        </div>
+                    </div>
+
+                    <button @click="updateProfile" class="btn-primary">
+                        <i class="fas fa-save"></i> 保存设置
+                    </button>
+                    <p v-if="profileMessage" class="success">
+                        <i class="fas fa-check-circle"></i> {{ profileMessage }}
+                    </p>
+                </div>
+            </div>
+
+            <!-- 历史记录页面 -->
+            <div v-if="currentPage === 'history'" class="history-page">
+                <h2><i class="fas fa-history"></i> 推荐历史</h2>
+                <div class="history-list">
+                    <div v-for="rec in recommendationHistory" :key="rec.id" class="history-item">
+                        <div class="history-info">
+                            <h4>食谱 #{{ rec.recipe_id }}</h4>
+                            <p>推荐分数: {{ Math.round(rec.score * 100) }}%</p>
+                            <p class="history-reasons">{{ rec.reasons?.join(', ') }}</p>
+                        </div>
+                        <div class="history-meta">
+                            <span>{{ formatDate(rec.created_at) }}</span>
+                            <div v-if="rec.user_feedback" class="feedback-stars">
+                                {{ '⭐'.repeat(rec.user_feedback) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="!recommendationHistory.length" class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <p>暂无推荐历史</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>智能食谱推荐系统 · 基于天气、时间和口味的个性化推荐</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
